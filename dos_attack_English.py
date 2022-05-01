@@ -32,7 +32,7 @@ class Main(cmd.Cmd):
 
 	def do_set_port(self,arg):
 		'Setting attack Ports'
-		self.port_num(arg)
+		self.set_port(arg)
 
 	def do_set_ip(self,arg):
 		'Setting the Attack IP address'
