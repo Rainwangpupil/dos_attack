@@ -14,7 +14,6 @@ import time
 
 str_byte = '我是在攻击你' * 500
 randbyte = str_byte.encode()
-print(sys.getsizeof(randbyte))
 so = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 count = 0
 threads = []
