@@ -28,7 +28,7 @@ class Main(cmd.Cmd):
 
 	def do_set_thread_num(self,arg):
 		'Example Set the number of attacking processes'
-		self.thread_num(arg)
+		self.set_thread_num(arg)
 
 	def do_set_port(self,arg):
 		'Setting attack Ports'
@@ -36,7 +36,7 @@ class Main(cmd.Cmd):
 
 	def do_set_ip(self,arg):
 		'Setting the Attack IP address'
-		self.ip(arg)
+		self.set_ip(arg)
 
 	def do_attack(self,arg):
 		'Attack function'
