@@ -10,9 +10,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Check issue actor
+      - name: rainwangpupil
         uses: fluttercandies/no-free-usage-action@v1.0.1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}  # 由GitHub提供的临时Token，必须在此处进行传递，且必须为这个值。
+          token: ${{ secrets.GITHUB_TOKEN }}
           forked: '--no-forked'
           words:  To support our project, please file the issue after you starred the repo. Thanks! 🙂
