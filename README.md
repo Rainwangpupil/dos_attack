@@ -2,6 +2,7 @@
 This project is a dos attack tool that you can use on the command line
 
 Chinese
+
 你可以在命令行使用python -m dos_attack_Chinese命令运行本程序
 程序中定义了一个类“Main”
 类继承了cmd库中的Cmd类
@@ -31,6 +32,7 @@ primary school student
 2022.05.01
 
 Russia
+
 Вы можете запустить эту программу в командной строке с помощью главной команды python -m
 В программе определен класс "Main"
 Классы наследуют от классов cmd в библиотеке cmd
@@ -44,6 +46,7 @@ Russia
 2022.05.01
 
 Japnese
+
 コマンド ラインで python -m dos_attack_English コマンドを使用して、このプログラムを実行できます
 プログラムでクラス "Main" が定義されています。
 クラスは、cmd ライブラリ内の Cmd クラスを継承します
