@@ -3,6 +3,7 @@ This project is a dos attack tool that you can use on the command line
 
 Chinese
 
+这个项目作用是实现DOS攻击。可以在一定程度上达到网速减慢，甚至被攻击端崩溃的效果
 你可以在命令行使用python -m dos_attack_Chinese命令运行本程序
 程序中定义了一个类“Main”
 类继承了cmd库中的Cmd类
@@ -19,6 +20,7 @@ Chinese
 
 English
 
+This project is to implement DOS attack. To a certain extent, the network speed can be slowed down, and even the effect of the attack end crash.
 You can run this program at the command line using the python -m dos_attack_English command
 A class "Main" is defined in the program
 Classes inherit from cmd classes in the cmd library
@@ -33,6 +35,7 @@ primary school student
 
 Russia
 
+Роль проекта — реализация DOS-атаки. Эффект замедления скорости сети может быть достигнут в некоторой степени, даже при падении атакующей стороны
 Вы можете запустить эту программу в командной строке с помощью главной команды python -m
 В программе определен класс "Main"
 Классы наследуют от классов cmd в библиотеке cmd
@@ -47,6 +50,7 @@ Russia
 
 Japnese
 
+このプロジェクトの役割はDOS攻撃を実現することです通信速度が遅くなったり攻撃側がクラッシュしたりします
 コマンド ラインで python -m dos_attack_English コマンドを使用して、このプログラムを実行できます
 プログラムでクラス "Main" が定義されています。
 クラスは、cmd ライブラリ内の Cmd クラスを継承します
