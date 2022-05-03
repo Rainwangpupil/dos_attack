@@ -71,10 +71,13 @@ class Main(cmd.Cmd):
 
 	def attack(self,chose):
 		chose = input('Do you really want to attack, please make a correct judgment in accordance with the local law seriously, the author (namely Chinese primary school students) will not attack the consequences (confirm input Y, exit input N)')
-		if chose == 'y':
+		if chose == 'y' or chose == 'Y':
 			self.true_to_attack() # attack
-		elif chose == 'n':
+		elif chose == 'n' or chose == 'N':
 			self.exit()
+		else:
+			print('Please input normally')
+			self.attack()
 
 	def true_to_attack_attack(self):
 		for i in range(200001):
