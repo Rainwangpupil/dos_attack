@@ -23,7 +23,7 @@ class Main(Cmd):
 	
 	def __init__(self):
 		super(Cmd).__init__()
-		self.thread = 50
+		self.thread = 500
 		self.port = 80
 		
 	def do_tutorial(self,arg): #教程调用函数
