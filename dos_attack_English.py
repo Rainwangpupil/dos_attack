@@ -14,7 +14,6 @@ from time import sleep
 str_byte = "I'm attacking you" * 500
 randbyte = str_byte.encode()
 so = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
-count = 0
 threads = []
 
 
