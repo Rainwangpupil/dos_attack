@@ -20,6 +20,12 @@ threads = [] # 多线程列表
 class Main(Cmd):
 	prompt = 'Dog_dos>' # 终端前缀
 	intro = '本工具仅限学习与装逼使用，请勿用于违法用途\n根据《刑法》第二百八十五条规定\n侵入国家事务、国防建设、尖端科学技术领域的计算机信息系统的，处三年以下有期徒刑或者拘役。\n如非法使用，后果自负' #终端提示语
+	
+	def __init__(self):
+		super(Cmd).__init__()
+		self.thread = 50
+		self.port = 80
+		
 	def do_tutorial(self,arg): #教程调用函数
 		'教你如何使用本工具'
 		self.tutorial(arg)
