@@ -7,7 +7,7 @@ Education: Fifth grade of primary school
 """
 import socket
 from threading import Thread
-from cmd import Cmd
+import cmd
 from sys import exit
 from time import sleep
 
@@ -17,11 +17,11 @@ so = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 threads = []
 
 
-class Main(Cmd):
+class Main(cmd.Cmd):
 	prompt = 'Dog_dos>'
 	intro = 'This tool is for learning only. Use it in accordance with local laws'
 	def __init__(self):
-		super(Cmd).__init__()
+		super(Main).__init__()
 		self.thread = 50
 		self.port = 80
 	def do_tutorial(self,arg):
