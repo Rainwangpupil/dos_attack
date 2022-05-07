@@ -21,7 +21,7 @@ class Main(cmd.Cmd):
 	prompt = 'Dog_dos>'
 	intro = 'This tool is for learning only. Use it in accordance with local laws'
 	def __init__(self):
-		super(Main).__init__()
+		super(Main,self).__init__()
 		self.thread = 50
 		self.port = 80
 	def do_tutorial(self,arg):
