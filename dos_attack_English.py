@@ -22,7 +22,7 @@ class Main(cmd.Cmd):
 	intro = 'This tool is for learning only. Use it in accordance with local laws'
 	def __init__(self):
 		super(Main,self).__init__()
-		self.thread = 50
+		self.thread = 500
 		self.port = 80
 	def do_tutorial(self,arg):
 		'How to use this tool.'
