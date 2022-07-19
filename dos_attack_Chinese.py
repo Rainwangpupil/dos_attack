@@ -3,7 +3,6 @@ Author: Lucky Pupil ;
 Date:2022.05.01 ;
 National: Chinese ;
 Project Name: Dos Attack ;
-Education: Fifth grade of primary school
 '''
 import socket #导入攻击库
 from threading import Thread # 导入多线程库
